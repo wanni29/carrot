@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:practice_market_app/size.dart';
 
 class CustomTextFormField extends StatelessWidget {
+  final textController;
   final validate;
   final String text;
   bool isPassword;
 
   CustomTextFormField(
-      {required this.text, required this.validate, this.isPassword = false});
+      {required this.text,
+      required this.validate,
+      this.textController,
+      this.isPassword = false});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +22,7 @@ class CustomTextFormField extends StatelessWidget {
         Text(text),
         const SizedBox(height: medium_gap),
         TextFormField(
+          controller: textController,
           validator: validate,
           obscureText: isPassword,
           decoration: InputDecoration(
