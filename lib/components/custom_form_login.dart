@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_market_app/components/custom_password_forgot.dart';
 import 'package:practice_market_app/components/custom_text_form_field.dart';
+import 'package:practice_market_app/components/custom_text_form_field_password.dart';
 import 'package:practice_market_app/pages/user_repository.dart';
 import 'package:practice_market_app/size.dart';
 import 'package:practice_market_app/validator_util.dart';
@@ -25,7 +26,7 @@ class CustomFormLogin extends StatelessWidget {
           CustomTextFormField(
               text: "Email", validate: validateEmail(), textController: _email),
           SizedBox(height: large_gap),
-          CustomTextFormField(
+          CustomTextFormFieldPassword(
               text: "Password",
               validate: validatePassword(),
               textController: _password),
